@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Délice du Four | Pendik — Pizza, Pide, Lahmacun</title>
+  <meta name="description" content="Délice du Four — Pendik'te taş fırında pizza, pide ve lahmacun. Kaynarca, Şehit Ozan Özen durağı." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #1c1c1c;
+      --cream: #f4eee4;
+      --paper: #efe6d8;
+      --terra: #c45c2d;
+      --terra-d: #9a3f1b;
+      --gold: #d4a574;
+      --muted: #7a7066;
+      --line: rgba(196,92,45,.25);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Outfit, sans-serif; background: var(--cream); color: var(--ink); }
+    a { color: inherit; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    nav.top {
+      position: sticky; top: 0; z-index: 40;
+      background: rgba(244,238,228,.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-in { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 16px; }
+    .brand { font-family: "Cormorant Garamond", serif; font-size: 26px; font-weight: 600; text-decoration: none; }
+    .links { display: flex; gap: 22px; font-size: 14px; }
+    .links a { text-decoration: none; color: var(--muted); }
+    .links a:hover { color: var(--ink); }
+    .btn {
+      background: var(--ink); color: var(--cream); text-decoration: none;
+      padding: 10px 16px; border-radius: 999px; font-size: 13px; font-weight: 500;
+    }
+    .hero {
+      padding: 72px 0 48px;
+      display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center;
+    }
+    .kicker { letter-spacing: .28em; font-size: 12px; color: var(--terra); font-weight: 500; }
+    h1 { font-family: "Cormorant Garamond", serif; font-size: clamp(42px, 7vw, 78px); line-height: .95; margin: 12px 0 18px; }
+    .lead { color: var(--muted); font-size: 18px; line-height: 1.6; max-width: 42ch; }
+    .cta { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+    .ghost { border: 1px solid var(--ink); background: transparent; color: var(--ink); }
+    .card {
+      background: var(--ink); color: var(--cream); border-radius: 28px; padding: 36px 32px;
+      min-height: 360px; display: flex; flex-direction: column; justify-content: flex-end;
+      background-image: radial-gradient(500px 240px at 80% 0%, rgba(196,92,45,.45), transparent 60%);
+    }
+    .oven { width: 54px; height: 44px; border: 2.5px solid var(--terra); border-bottom: 0; border-radius: 48px 48px 6px 6px; margin-bottom: 18px; }
+    .card h2 { font-family: "Cormorant Garamond", serif; font-size: 40px; font-weight: 600; }
+    section { padding: 56px 0; }
+    .sec-title { font-family: "Cormorant Garamond", serif; font-size: 40px; margin: 8px 0 28px; }
+    .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .tile { background: #fffaf3; border: 1px solid var(--line); border-radius: 20px; padding: 22px; }
+    .tile h3 { font-family: "Cormorant Garamond", serif; font-size: 28px; margin-bottom: 6px; }
+    .tile p { color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .menu { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 48px; }
+    .item { display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; padding: 14px 0; border-bottom: 1px dashed var(--line); }
+    .item h4 { font-size: 16px; }
+    .item p { grid-column: 1; color: var(--muted); font-size: 13px; }
+    .price { font-family: "Cormorant Garamond", serif; font-size: 22px; color: var(--terra-d); }
+    .hours { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); font-size: 13px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    @media (max-width: 800px) {
+      .hero, .grid3, .menu, .hours { grid-template-columns: 1fr; }
+      .links { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="top">
+    <div class="wrap nav-in">
+      <a class="brand" href="#">Délice du Four</a>
+      <div class="links">
+        <a href="#menu">Menü</a>
+        <a href="#hikaye">Hikâye</a>
+        <a href="#konum">Konum</a>
+      </div>
+      <a class="btn" href="#konum">Yol Tarifi</a>
+    </div>
+  </nav>
+
+  <header class="wrap hero">
+    <div>
+      <div class="kicker">PENDİK · TAŞ FIRIN</div>
+      <h1>Fırının<br>lezzeti.</h1>
+      <p class="lead">Pizza, pide ve lahmacun aynı taş fırında. Kaynarca’da, durak üstünde, park manzaralı terasta.</p>
+      <div class="cta">
+        <a class="btn" href="#menu">Menüyü Gör</a>
+        <a class="btn ghost" href="https://instagram.com/delicedufour" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <aside class="card">
+      <div class="oven"></div>
+      <div class="kicker">PIZZA · PIDE · LAHMACUN</div>
+      <h2>Délice du Four</h2>
+    </aside>
+  </header>
+
+  <section class="wrap" id="hikaye">
+    <div class="kicker">NEDEN BİZ</div>
+    <h2 class="sec-title">Üç hamur, bir fırın.</h2>
+    <div class="grid3">
+      <article class="tile"><h3>Pizza</h3><p>Uzun dinlendirilmiş hamur, taş fırında kabaran kenar, sade malzemeler.</p></article>
+      <article class="tile"><h3>Pide</h3><p>Kuşbaşı, kıyma, kaşar. 45 cm, tereyağlı, fırından çıkınca masaya.</p></article>
+      <article class="tile"><h3>Lahmacun</h3><p>İnce hamur, günlük harç. Yeşillik ve limon ile.</p></article>
+    </div>
+  </section>
+
+  <section class="wrap" id="menu">
+    <div class="kicker">MENÜ</div>
+    <h2 class="sec-title">Fırından çıkanlar</h2>
+    <div class="menu">
+      <div>
+        <h3 class="kicker">PIZZA</h3>
+        <div class="item"><div><h4>Margherita</h4><p>Domates sos, mozzarella, fesleğen</p></div><div class="price">320₺</div></div>
+        <div class="item"><div><h4>Diavola</h4><p>Acılı sucuk, pul biber, mozzarella</p></div><div class="price">380₺</div></div>
+        <div class="item"><div><h4>Pendik Special</h4><p>Pastırma, köz biber, kaşar, yumurta</p></div><div class="price">420₺</div></div>
+        <div class="item"><div><h4>Funghi</h4><p>Izgara mantar, kekik, sarımsaklı yağ</p></div><div class="price">360₺</div></div>
+      </div>
+      <div>
+        <h3 class="kicker">PIDE & LAHMACUN</h3>
+        <div class="item"><div><h4>Kuşbaşılı Pide</h4><p>Dana kuşbaşı, biber, tereyağı</p></div><div class="price">340₺</div></div>
+        <div class="item"><div><h4>Karışık Pide</h4><p>Kuşbaşı, sucuk, kaşar, yumurta</p></div><div class="price">360₺</div></div>
+        <div class="item"><div><h4>Klasik Lahmacun</h4><p>Yeşillik ve limon ile</p></div><div class="price">160₺</div></div>
+        <div class="item"><div><h4>Kaşarlı Lahmacun</h4><p>Klasik harç üzeri kaşar</p></div><div class="price">190₺</div></div>
+      </div>
+    </div>
+    <p style="margin-top:18px;color:var(--muted);font-size:13px">Fiyatlar örnektir, güncel liste dükkanda ve Instagram’da.</p>
+  </section>
+
+  <section class="wrap hours" id="konum">
+    <div>
+      <div class="kicker">KONUM</div>
+      <h2 class="sec-title">Pendik / Kaynarca</h2>
+      <p class="lead">Şehit Ozan Özen İETT durağı yanı. Teras park manzaralı.</p>
+      <p style="margin-top:16px;color:var(--muted)">Adres netleşince buraya cadde ve bina no yazılacak.</p>
+      <div class="cta">
+        <a class="btn" href="https://maps.google.com/?q=Pendik+Kaynarca+Şehit+Ozan+Özen" target="_blank" rel="noopener">Haritada Aç</a>
+        <a class="btn ghost" href="tel:+905550000000">Telefon</a>
+      </div>
+    </div>
+    <div class="tile">
+      <h3>Saatler</h3>
+      <p style="margin:10px 0">Her gün 11:00 – 00:00</p>
+      <p>Paket ve gel-al açık.</p>
+      <p style="margin-top:18px">Instagram @delicedufour<br>TikTok @delicedufour</p>
+    </div>
+  </section>
+
+  <footer class="wrap">
+    <span>© 2026 Délice du Four · Pendik</span>
+    <span>Pizza · Pide · Lahmacun</span>
+  </footer>
+</body>
+</html>
